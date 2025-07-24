@@ -1,0 +1,175 @@
+# Copyright (C) 2025 Auto Tags Smart
+# This file is distributed under the same license as the Auto Tags Smart package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Auto Tags Smart 1.0\n"
+"Report-Msgid-Bugs-To: https://maisondasilva.com.br/\n"
+"POT-Creation-Date: 2025-07-21 12:28-0300\n"
+"PO-Revision-Date: 2025-07-24 13:25+0000\n"
+"Last-Translator: Eugene Fox <eugene@xfox111.net>\n"
+"Language-Team: Ukrainian (Ukraine)\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: auto-tags-smart.php:98 auto-tags-smart.php:99
+#: admin/auto-tags-smart-admin.php:7
+msgid "Auto Tags Smart"
+msgstr "Розумні Авто-позначки"
+
+#: auto-tags-smart.php:111
+msgid "Settings"
+msgstr "Налаштування"
+
+#: admin/auto-tags-smart-admin.php:12
+msgid "Select All"
+msgstr "Вибрати все"
+
+#: admin/auto-tags-smart-admin.php:13
+msgid "Deselect All"
+msgstr "Зняти виділення"
+
+#: admin/auto-tags-smart-admin.php:29
+msgid "STATUS: Active ✓"
+msgstr "СТАТУС: Активно ✓"
+
+#: admin/auto-tags-smart-admin.php:31
+msgid "STATUS: Active but nothing to examine"
+msgstr "СТАТУС: Активно, немає доступних записів для аналізу"
+
+#: admin/auto-tags-smart-admin.php:33
+msgid "STATUS: Inactive"
+msgstr "СТАТУС: Неактивно"
+
+#: admin/auto-tags-smart-admin.php:41
+msgid "Enable Auto Tags Smart"
+msgstr "Увімкнути розумні авто-позначки"
+
+#: admin/auto-tags-smart-admin.php:42
+msgid "Enables automatic detection of existing tags in posts."
+msgstr "Увімкнути автоматичне визначення існуючих позначкiв у записах."
+
+#: admin/auto-tags-smart-admin.php:49
+msgid "Block manually added tags"
+msgstr "Блокувати вручну додані позначки"
+
+#: admin/auto-tags-smart-admin.php:50
+msgid "Removes manually added tags and uses only automatically detected ones."
+msgstr "Коли увімкнено, опція видаляє вручну додані позначки та використовує лише автоматично визначені."
+
+#: admin/auto-tags-smart-admin.php:57
+msgid "Examine post title"
+msgstr "Аналізувати заголовки записів"
+
+#: admin/auto-tags-smart-admin.php:58
+msgid "Search for tags in the post title."
+msgstr "Шукати позначки у заголовках записів."
+
+#: admin/auto-tags-smart-admin.php:65
+msgid "Examine post content"
+msgstr "Аналізувати вміст записів"
+
+#: admin/auto-tags-smart-admin.php:66
+msgid "Search for tags in the post content."
+msgstr "Шукати позначки у тексті записів."
+
+#: admin/auto-tags-smart-admin.php:73
+msgid "Filter by category"
+msgstr "Фільтрувати за категоріями"
+
+#: admin/auto-tags-smart-admin.php:74
+msgid "Apply automatic tags only to specific categories."
+msgstr "Застосовувати автоматичні позначки лише до вибраних категорій."
+
+#: admin/auto-tags-smart-admin.php:79
+msgid "Minimum tag length"
+msgstr "Мінімальна довжина позначкiв:"
+
+#: admin/auto-tags-smart-admin.php:85
+msgid "Tags with fewer characters than this will be ignored."
+msgstr "Позначки з меншою кількістю символів будуть ігноруватися."
+
+#: admin/auto-tags-smart-admin.php:92
+msgid "Case sensitive"
+msgstr "Чутливість до регістру"
+
+#: admin/auto-tags-smart-admin.php:93
+msgid "If enabled, \"PHP\" and \"php\" will be treated as different tags."
+msgstr "Коли увімкнено, \"PHP\" і \"php\" будуть визначатися як різні позначки."
+
+#: admin/auto-tags-smart-admin.php:99
+msgid "Included Categories"
+msgstr "Відстежувані категорії"
+
+#: admin/auto-tags-smart-admin.php:127
+msgid "Clean Uninstall"
+msgstr "Налаштування видалення"
+
+#: admin/auto-tags-smart-admin.php:133
+msgid "Remove all options from database"
+msgstr "Видаляти всі налаштування з бази даних"
+
+#: admin/auto-tags-smart-admin.php:134
+msgid "Removes all plugin settings when uninstalled (not on deactivation)."
+msgstr "Коли увімкнено, ця опція видалить всі налаштування плагіна при його видаленні (не деактивації)."
+
+#: admin/auto-tags-smart-admin.php:139
+msgid "Save Settings"
+msgstr "Зберегти зміни"
+
+#~ msgid ""
+#~ "Auto Tags Smart requires WordPress %s or higher. You are running version "
+#~ "%s. Please upgrade WordPress."
+#~ msgstr ""
+#~ "Розумним авто-позначкам потрібна версія WordPress %s або вище. Ваша поточна версія "
+#~ "%s. Будь ласка, оновіть WordPress."
+
+#~ msgid ""
+#~ "Auto Tags Smart requires PHP %s or higher. You are running version %s. "
+#~ "Please upgrade PHP."
+#~ msgstr ""
+#~ "Розумним авто-позначкам потрібна версія PHP %s або вище. Ваша поточна версія %s. "
+#~ "Будь ласка, оновіть PHP."
+
+#~ msgid "📊 Plugin Statistics"
+#~ msgstr "📊 Статистика плагіна"
+
+#~ msgid "Published posts:"
+#~ msgstr "Опубліковано записів:"
+
+#~ msgid "Total tags:"
+#~ msgstr "Загальна кількість позначкiв:"
+
+#~ msgid "Auto Tags Smart is active and working!"
+#~ msgstr "Розумні авто-позначкам активні та працюють!"
+
+#~ msgid "🚀 About Auto Tags Smart"
+#~ msgstr "🚀 Про розумні авто-позначки"
+
+#~ msgid "Auto Tags Smart is an enhanced automatic tagging system, offering:"
+#~ msgstr ""
+#~ "Розумні авто-позначки - це вдосконалена система автоматичної генерації тегів, яка пропонує:"
+
+#~ msgid "Intelligent detection of existing tags"
+#~ msgstr "Інтелектуальне визначення існуючих позначкiв"
+
+#~ msgid "Advanced filter settings"
+#~ msgstr "Розширені налаштування фільтрації"
+
+#~ msgid "Minimum tag length control"
+#~ msgstr "Контроль мінімальної довжини позначкiв"
+
+#~ msgid "Case sensitivity option"
+#~ msgstr "Опція чутливості до регістру"
+
+#~ msgid "Modern and intuitive interface"
+#~ msgstr "Сучасний та зрозумілий інтерфейс"
+
+#: admin/auto-tags-smart-admin.php:162
+msgid "Developed by"
+msgstr "Розробник:"
+
+#~ msgid "Plugin developed by"
+#~ msgstr "Розробник плагіна:"
