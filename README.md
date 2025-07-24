@@ -1,6 +1,6 @@
 # Auto Tags Smart
 
-[🇧🇷 Português](#português) | [🇺🇸 English](#english)
+[🇧🇷 Português](#-português) | [🇺🇸 English](#-english)
 
 ---
 
