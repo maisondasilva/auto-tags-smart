@@ -37,7 +37,7 @@ Plugin WordPress para detecção automática e aplicação inteligente de tags e
 
 ### 🚀 Como Usar
 
-1. **Configure as opções** na página "Auto Tags" no menu Posts
+1. **Configure as opções** na página "Auto Tags Smart" no menu Posts
 2. **Escolha o escopo**: examinar títulos, conteúdo ou ambos
 3. **Configure filtros** por categoria se necessário
 4. **Ajuste configurações avançadas** conforme suas necessidades
@@ -124,7 +124,7 @@ WordPress plugin for automatic detection and intelligent application of existing
 
 ### 🚀 How to Use
 
-1. **Configure options** on the "Auto Tags" page in the Posts menu
+1. **Configure options** on the "Auto Tags Smart" page in the Posts menu
 2. **Choose scope**: examine titles, content, or both
 3. **Set up filters** by category if needed
 4. **Adjust advanced settings** according to your needs
