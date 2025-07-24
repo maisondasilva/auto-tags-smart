@@ -33,7 +33,7 @@ Plugin WordPress para detecção automática e aplicação inteligente de tags e
 1. Baixe o arquivo ZIP mais recente das [Releases](../../releases)
 2. Extraia para `/wp-content/plugins/auto-tags-smart/`
 3. Ative o plugin no painel administrativo do WordPress
-4. Configure as opções em **Posts → Auto Tags**
+4. Configure as opções em **Posts → Auto Tags Smart**
 
 ### 🚀 Como Usar
 
@@ -120,7 +120,7 @@ WordPress plugin for automatic detection and intelligent application of existing
 1. Download the latest ZIP file from [Releases](../../releases)
 2. Extract to `/wp-content/plugins/auto-tags-smart/`
 3. Activate the plugin in WordPress admin panel
-4. Configure options under **Posts → Auto Tags**
+4. Configure options under **Posts → Auto Tags Smart**
 
 ### 🚀 How to Use
 
