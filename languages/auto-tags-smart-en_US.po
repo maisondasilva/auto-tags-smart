@@ -1,0 +1,147 @@
+# Copyright (C) 2025 Auto Tags Smart
+# This file is distributed under the same license as the Auto Tags Smart package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Auto Tags Smart 1.0\n"
+"Report-Msgid-Bugs-To: https://maisondasilva.com.br/\n"
+"POT-Creation-Date: 2025-07-21 12:28-0300\n"
+"PO-Revision-Date: 2025-07-21 01:30+0000\n"
+"Last-Translator: Maison da Silva <contato@maisondasilva.com.br>\n"
+"Language-Team: English (United States)\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: auto-tags-smart.php:98 auto-tags-smart.php:99
+#: admin/auto-tags-smart-admin.php:7
+msgid "Auto Tags Smart"
+msgstr "Auto Tags Smart"
+
+#: auto-tags-smart.php:111
+msgid "Settings"
+msgstr "Settings"
+
+#: admin/auto-tags-smart-admin.php:12
+msgid "Select All"
+msgstr "Select All"
+
+#: admin/auto-tags-smart-admin.php:13
+msgid "Deselect All"
+msgstr "Deselect All"
+
+#: admin/auto-tags-smart-admin.php:29
+#, fuzzy
+msgid "STATUS: Active ✓"
+msgstr "STATUS: Active ✓"
+
+#: admin/auto-tags-smart-admin.php:31
+#, fuzzy
+msgid "STATUS: Active but nothing to examine"
+msgstr "STATUS: Active but nothing to examine"
+
+#: admin/auto-tags-smart-admin.php:33
+#, fuzzy
+msgid "STATUS: Inactive"
+msgstr "STATUS: Inactive"
+
+#: admin/auto-tags-smart-admin.php:41
+msgid "Enable Auto Tags Smart"
+msgstr "Enable Auto Tags Smart"
+
+#: admin/auto-tags-smart-admin.php:42
+msgid "Enables automatic detection of existing tags in posts."
+msgstr "Enables automatic detection of existing tags in posts."
+
+#: admin/auto-tags-smart-admin.php:49
+msgid "Block manually added tags"
+msgstr "Block manually added tags"
+
+#: admin/auto-tags-smart-admin.php:50
+msgid "Removes manually added tags and uses only automatically detected ones."
+msgstr "Removes manually added tags and uses only automatically detected ones."
+
+#: admin/auto-tags-smart-admin.php:57
+msgid "Examine post title"
+msgstr "Examine post title"
+
+#: admin/auto-tags-smart-admin.php:58
+#, fuzzy
+msgid "Search for tags in the post title."
+msgstr "Look for tags in the post title."
+
+#: admin/auto-tags-smart-admin.php:65
+msgid "Examine post content"
+msgstr "Examine post content"
+
+#: admin/auto-tags-smart-admin.php:66
+#, fuzzy
+msgid "Search for tags in the post content."
+msgstr "Look for tags in the post content."
+
+#: admin/auto-tags-smart-admin.php:73
+msgid "Filter by category"
+msgstr "Filter by category"
+
+#: admin/auto-tags-smart-admin.php:74
+msgid "Apply automatic tags only to specific categories."
+msgstr "Apply automatic tags only to specific categories."
+
+#: admin/auto-tags-smart-admin.php:79
+#, fuzzy
+msgid "Minimum tag length"
+msgstr "Minimum tag length:"
+
+#: admin/auto-tags-smart-admin.php:85
+msgid "Tags with fewer characters than this will be ignored."
+msgstr "Tags with fewer characters than this will be ignored."
+
+#: admin/auto-tags-smart-admin.php:92
+msgid "Case sensitive"
+msgstr "Case sensitive"
+
+#: admin/auto-tags-smart-admin.php:93
+msgid "If enabled, \"PHP\" and \"php\" will be treated as different tags."
+msgstr "If enabled, \"PHP\" and \"php\" will be treated as different tags."
+
+#: admin/auto-tags-smart-admin.php:99
+msgid "Included Categories"
+msgstr "Included Categories"
+
+#: admin/auto-tags-smart-admin.php:127
+msgid "Clean Uninstall"
+msgstr "Clean Uninstall"
+
+#: admin/auto-tags-smart-admin.php:133
+msgid "Remove all options from database"
+msgstr "Remove all options from database"
+
+#: admin/auto-tags-smart-admin.php:134
+msgid "Removes all plugin settings when uninstalled (not on deactivation)."
+msgstr "Removes all plugin settings when uninstalled (not on deactivation)."
+
+#: admin/auto-tags-smart-admin.php:139
+msgid "Save Settings"
+msgstr "Save Settings"
+
+#~ msgid ""
+#~ "Auto Tags Smart requires WordPress %s or higher. You are running version "
+#~ "%s. Please upgrade WordPress."
+#~ msgstr ""
+#~ "Auto Tags Smart requires WordPress %s or higher. You are running version "
+#~ "%s. Please upgrade WordPress."
+
+#~ msgid ""
+#~ "Auto Tags Smart requires PHP %s or higher. You are running version %s. "
+#~ "Please upgrade PHP."
+#~ msgstr ""
+#~ "Auto Tags Smart requires PHP %s or higher. You are running version %s. "
+#~ "Please upgrade PHP."
+
+#: admin/auto-tags-smart-admin.php:162
+msgid "Developed by"
+msgstr "Developed by"
+
+#~ msgid "Plugin developed by"
+#~ msgstr "Plugin developed by"
