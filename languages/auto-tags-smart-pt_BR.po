@@ -14,7 +14,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: auto-tags-smart.php:98 auto-tags-smart.php:99
+#: auto-tags-smart.php:23
+msgid "Automatically detects and assigns existing tags to posts using smart content analysis."
+msgstr "Detecta e atribui automaticamente tags existentes aos posts usando análise inteligente de conteúdo."
+
+#: auto-tags-smart.php:98
+msgid "Auto Tags Smart Settings"
+msgstr "Configurações do Auto Tags Smart"
+
+#: auto-tags-smart.php:99
 #: admin/auto-tags-smart-admin.php:7
 msgid "Auto Tags Smart"
 msgstr "Auto Tags Smart"
