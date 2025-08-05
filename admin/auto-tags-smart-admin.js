@@ -13,7 +13,7 @@ jQuery(document).ready(function($) {
     
     // Toggle categories container based on filter checkbox
     function toggleCategoriesContainer() {
-        var isChecked = $('#at-filter-by-category').is(':checked');
+        var isChecked = $('#autotasm-filter-by-category').is(':checked');
         var $container = $('#categories-container');
         var $heading = $('#included-categories');
         var $selectAllBtn = $('.at-select-all');
@@ -41,9 +41,6 @@ jQuery(document).ready(function($) {
     // Initialize categories container state
     toggleCategoriesContainer();
     
-    // Handle filter by category checkbox change
-    // (Already handled above to prevent auto-save)
-    
     // Add select all / deselect all functionality for categories
     if ($('#categories-container').length) {
         // Get translated strings (fallback to Portuguese if not available)
@@ -56,7 +53,7 @@ jQuery(document).ready(function($) {
         $('#included-categories').after($selectAllBtn).after($deselectAllBtn);
         
         // Initially hide them if filter is not checked
-        if (!$('#at-filter-by-category').is(':checked')) {
+        if (!$('#autotasm-filter-by-category').is(':checked')) {
             $selectAllBtn.hide();
             $deselectAllBtn.hide();
         }
@@ -100,15 +97,21 @@ jQuery(document).ready(function($) {
         updateButtonText();
     }
     
-    // Validate minimum tag length
-    $('#at-minimum-tag-length').on('change', function() {
+    // Validate minimum tag length input
+    $('#autotasm-minimum-tag-length').on('input change', function() {
         var value = parseInt($(this).val());
         if (value < 1) {
             $(this).val(1);
-            showNotice('O comprimento mínimo da tag deve ser pelo menos 1.', 'warning');
+            var errorMsg = (typeof atStrings !== 'undefined' && atStrings.errorMinLength) 
+                ? atStrings.errorMinLength 
+                : 'O comprimento mínimo da tag deve ser pelo menos 1.';
+            showNotice(errorMsg, 'warning');
         } else if (value > 50) {
             $(this).val(50);
-            showNotice('O comprimento mínimo da tag não pode ser maior que 50.', 'warning');
+            var errorMsg = (typeof atStrings !== 'undefined' && atStrings.errorMaxLength) 
+                ? atStrings.errorMaxLength 
+                : 'O comprimento mínimo da tag não pode ser maior que 50.';
+            showNotice(errorMsg, 'warning');
         }
     });
     
@@ -124,22 +127,28 @@ jQuery(document).ready(function($) {
     
     // Form validation before submit
     $('form').on('submit', function(e) {
-        var examineTitle = $('#at-examine-post-title').is(':checked');
-        var examineContent = $('#at-examine-post-content').is(':checked');
-        var isEnabled = $('#at-turn-on').is(':checked');
+        var examineTitle = $('#autotasm-examine-post-title').is(':checked');
+        var examineContent = $('#autotasm-examine-post-content').is(':checked');
+        var isEnabled = $('#autotasm-turn-on').is(':checked');
         
         if (isEnabled && !examineTitle && !examineContent) {
             e.preventDefault();
-            showNotice('Você deve selecionar pelo menos uma opção: "Examinar título" ou "Examinar conteúdo".', 'error');
+            var errorMsg = (typeof atStrings !== 'undefined' && atStrings.errorExamineOption) 
+                ? atStrings.errorExamineOption 
+                : 'Você deve selecionar pelo menos uma opção: "Examinar título" ou "Examinar conteúdo".';
+            showNotice(errorMsg, 'error');
             return false;
         }
         
-        var filterByCategory = $('#at-filter-by-category').is(':checked');
+        var filterByCategory = $('#autotasm-filter-by-category').is(':checked');
         var hasSelectedCategories = $('#categories-container input[type="checkbox"]:checked').length > 0;
         
         if (isEnabled && filterByCategory && !hasSelectedCategories) {
             e.preventDefault();
-            showNotice('Se você ativar o filtro por categoria, deve selecionar pelo menos uma categoria.', 'error');
+            var errorMsg = (typeof atStrings !== 'undefined' && atStrings.errorCategoryFilter) 
+                ? atStrings.errorCategoryFilter 
+                : 'Se você ativar o filtro por categoria, deve selecionar pelo menos uma categoria.';
+            showNotice(errorMsg, 'error');
             return false;
         }
     });
@@ -197,37 +206,34 @@ jQuery(document).ready(function($) {
     $(document).off('change', 'input, select, textarea');
     
     // Add our own change handlers that DON'T auto-save
-    $('#at-turn-on, #at-examine-post-title, #at-examine-post-content').on('change', function() {
+    $('#autotasm-turn-on, #autotasm-examine-post-title, #autotasm-examine-post-content').on('change', function() {
         updateStatusIndicators();
         // Trigger change immediately for real-time status update
         setTimeout(updateStatusIndicators, 10);
     });
     
-    $('#at-filter-by-category').on('change', function() {
+    $('#autotasm-filter-by-category').on('change', function() {
         toggleCategoriesContainer();
     });
     
     function updateStatusIndicators() {
-        var isEnabled = $('#at-turn-on').is(':checked');
-        var examineTitle = $('#at-examine-post-title').is(':checked');
-        var examineContent = $('#at-examine-post-content').is(':checked');
+        var isEnabled = $('#autotasm-turn-on').is(':checked');
+        var examineTitle = $('#autotasm-examine-post-title').is(':checked');
+        var examineContent = $('#autotasm-examine-post-content').is(':checked');
         
-        var $statusElement = $('#at-status');
+        var $statusElement = $('#autotasm-status');
         
         if (isEnabled && (examineTitle || examineContent)) {
-            $statusElement.removeClass('at-status-inactive at-status-warning').addClass('at-status-active');
+            $statusElement.removeClass('autotasm-status-inactive autotasm-status-warning').addClass('autotasm-status-active');
             $statusElement.css('color', 'green').text(atStrings.statusActive);
         } else if (isEnabled && (!examineTitle && !examineContent)) {
-            $statusElement.removeClass('at-status-active at-status-inactive').addClass('at-status-warning');
+            $statusElement.removeClass('autotasm-status-active autotasm-status-inactive').addClass('autotasm-status-warning');
             $statusElement.css('color', 'orange').text(atStrings.statusActiveNothing);
         } else {
-            $statusElement.removeClass('at-status-active at-status-warning').addClass('at-status-inactive');
+            $statusElement.removeClass('autotasm-status-active autotasm-status-warning').addClass('autotasm-status-inactive');
             $statusElement.css('color', 'red').text(atStrings.statusInactive);
         }
     }
-    
-    // Update status when relevant checkboxes change
-    // (Already handled above to prevent auto-save)
     
     // Add smooth scrolling to anchor links
     $('a[href^="#"]').on('click', function(e) {
@@ -241,9 +247,12 @@ jQuery(document).ready(function($) {
     });
     
     // Add confirmation for clean uninstall option
-    $('#at-clean-uninstall').on('change', function() {
+    $('#autotasm-clean-uninstall').on('change', function() {
         if ($(this).is(':checked')) {
-            var confirmed = confirm('Tem certeza? Esta opção removerá TODAS as configurações do plugin quando ele for desinstalado.');
+            var confirmMsg = (typeof atStrings !== 'undefined' && atStrings.confirmCleanUninstall) 
+                ? atStrings.confirmCleanUninstall 
+                : 'Tem certeza? Esta opção removerá TODAS as configurações do plugin quando ele for desinstalado.';
+            var confirmed = confirm(confirmMsg);
             if (!confirmed) {
                 $(this).prop('checked', false);
             }
