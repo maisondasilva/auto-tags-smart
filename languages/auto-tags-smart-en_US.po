@@ -18,11 +18,7 @@ msgstr ""
 msgid "Automatically detects and assigns existing tags to posts using smart content analysis."
 msgstr "Automatically detects and assigns existing tags to posts using smart content analysis."
 
-#: auto-tags-smart.php:98
-msgid "Auto Tags Smart Settings"
-msgstr "Auto Tags Smart Settings"
-
-#: auto-tags-smart.php:99
+#: auto-tags-smart.php:98 auto-tags-smart.php:99
 #: admin/auto-tags-smart-admin.php:7
 msgid "Auto Tags Smart"
 msgstr "Auto Tags Smart"
@@ -40,17 +36,14 @@ msgid "Deselect All"
 msgstr "Deselect All"
 
 #: admin/auto-tags-smart-admin.php:29
-#, fuzzy
 msgid "STATUS: Active ✓"
 msgstr "STATUS: Active ✓"
 
 #: admin/auto-tags-smart-admin.php:31
-#, fuzzy
 msgid "STATUS: Active but nothing to examine"
 msgstr "STATUS: Active but nothing to examine"
 
 #: admin/auto-tags-smart-admin.php:33
-#, fuzzy
 msgid "STATUS: Inactive"
 msgstr "STATUS: Inactive"
 
@@ -75,31 +68,28 @@ msgid "Examine post title"
 msgstr "Examine post title"
 
 #: admin/auto-tags-smart-admin.php:58
-#, fuzzy
-msgid "Search for tags in the post title."
-msgstr "Look for tags in the post title."
+msgid "Analyzes the post title to find tags."
+msgstr "Analyzes the post title to find tags."
 
 #: admin/auto-tags-smart-admin.php:65
 msgid "Examine post content"
 msgstr "Examine post content"
 
 #: admin/auto-tags-smart-admin.php:66
-#, fuzzy
-msgid "Search for tags in the post content."
-msgstr "Look for tags in the post content."
+msgid "Analyzes the post content to find tags."
+msgstr "Analyzes the post content to find tags."
 
 #: admin/auto-tags-smart-admin.php:73
 msgid "Filter by category"
 msgstr "Filter by category"
 
 #: admin/auto-tags-smart-admin.php:74
-msgid "Apply automatic tags only to specific categories."
-msgstr "Apply automatic tags only to specific categories."
+msgid "Only applies tags to posts in selected categories."
+msgstr "Only applies tags to posts in selected categories."
 
 #: admin/auto-tags-smart-admin.php:79
-#, fuzzy
 msgid "Minimum tag length"
-msgstr "Minimum tag length:"
+msgstr "Minimum tag length"
 
 #: admin/auto-tags-smart-admin.php:85
 msgid "Tags with fewer characters than this will be ignored."
@@ -132,6 +122,26 @@ msgstr "Removes all plugin settings when uninstalled (not on deactivation)."
 #: admin/auto-tags-smart-admin.php:139
 msgid "Save Settings"
 msgstr "Save Settings"
+
+#: auto-tags-smart.php:131
+msgid "You must select at least one option: \"Examine title\" or \"Examine content\"."
+msgstr "You must select at least one option: \"Examine title\" or \"Examine content\"."
+
+#: auto-tags-smart.php:132
+msgid "If you enable category filter, you must select at least one category."
+msgstr "If you enable category filter, you must select at least one category."
+
+#: auto-tags-smart.php:133
+msgid "Tag minimum length must be at least 1."
+msgstr "Tag minimum length must be at least 1."
+
+#: auto-tags-smart.php:134
+msgid "Tag minimum length cannot be greater than 50."
+msgstr "Tag minimum length cannot be greater than 50."
+
+#: auto-tags-smart.php:135
+msgid "Are you sure? This option will remove ALL plugin settings when it is uninstalled."
+msgstr "Are you sure? This option will remove ALL plugin settings when it is uninstalled."
 
 #~ msgid ""
 #~ "Auto Tags Smart requires WordPress %s or higher. You are running version "

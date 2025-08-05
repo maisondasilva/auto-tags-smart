@@ -71,7 +71,48 @@ msgid "Search for tags in the post title."
 msgstr ""
 
 #: admin/auto-tags-smart-admin.php:65
+#: admin/auto-tags-smart-admin.php:49
+msgid "Examine post title"
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php:50
+msgid "Analyzes the post title to find tags."
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php:55
 msgid "Examine post content"
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php:56
+msgid "Analyzes the post content to find tags."
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php:62
+msgid "Filter by category"
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php:63
+msgid "Only applies tags to posts in selected categories."
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php:68
+msgid "Tag Length"
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php:73
+msgid "Minimum tag length"
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php:74
+msgid "Tags with fewer characters than this will be ignored."
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php:79
+msgid "Case sensitive"
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php:80
+msgid "Whether tag matching should be case sensitive."
 msgstr ""
 
 #: admin/auto-tags-smart-admin.php:66
@@ -120,4 +161,24 @@ msgstr ""
 
 #: admin/auto-tags-smart-admin.php:139
 msgid "Save Settings"
+msgstr ""
+
+#: auto-tags-smart.php:131
+msgid "You must select at least one option: \"Examine title\" or \"Examine content\"."
+msgstr ""
+
+#: auto-tags-smart.php:132
+msgid "If you enable category filter, you must select at least one category."
+msgstr ""
+
+#: auto-tags-smart.php:133
+msgid "Tag minimum length must be at least 1."
+msgstr ""
+
+#: auto-tags-smart.php:134
+msgid "Tag minimum length cannot be greater than 50."
+msgstr ""
+
+#: auto-tags-smart.php:135
+msgid "Are you sure? This option will remove ALL plugin settings when it is uninstalled."
 msgstr ""
