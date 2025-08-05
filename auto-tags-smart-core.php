@@ -1,22 +1,22 @@
 <?php
 defined( 'ABSPATH' ) || die( 'Cannot access pages directly.' );
 
-function at_included_categories() {
-	return get_option( 'at_included_categories' ) ? array_map(
+function autotasm_included_categories() {
+	return get_option( 'autotasm_included_categories' ) ? array_map(
 		function( $cat_id ) {
 			return + $cat_id;
 		},
-		get_option( 'at_included_categories' )
+		get_option( 'autotasm_included_categories' )
 	) : array();
 }
 
-function at_halt() {
-	$examine_post = get_option( 'at_examine_post_title' ) || get_option( 'at_examine_post_content' );
+function autotasm_halt() {
+	$examine_post = get_option( 'autotasm_examine_post_title' ) || get_option( 'autotasm_examine_post_content' );
 
-	return ! $examine_post || ( get_option( 'at_filter_by_category' ) && empty( at_included_categories() ) );
+	return ! $examine_post || ( get_option( 'autotasm_filter_by_category' ) && empty( autotasm_included_categories() ) );
 }
 
-function at_smart_tagging( $the_post_id ) {
+function autotasm_smart_tagging( $the_post_id ) {
 	$post = get_post( $the_post_id );
 
 	if ( 'post' === $post->post_type ) {
@@ -24,13 +24,13 @@ function at_smart_tagging( $the_post_id ) {
 
 		$content_to_analyze = '';
 
-		if ( get_option( 'at_examine_post_title' ) ) {
+		if ( get_option( 'autotasm_examine_post_title' ) ) {
 			$the_post_title = get_post( $the_post_id )->post_title;
 			$the_post_title = wp_strip_all_tags( $the_post_title );
 			$content_to_analyze .= ' ' . $the_post_title;
 		}
 
-		if ( get_option( 'at_examine_post_content' ) ) {
+		if ( get_option( 'autotasm_examine_post_content' ) ) {
 			$the_post_content = get_post( $the_post_id )->post_content;
 			$the_post_content = wp_strip_all_tags( $the_post_content );
 			$content_to_analyze .= ' ' . $the_post_content;
@@ -43,13 +43,13 @@ function at_smart_tagging( $the_post_id ) {
 			)
 		);
 
-		if ( $existing_tags && ( ! get_option( 'at_filter_by_category' ) || array_intersect( $post_categories, at_included_categories() ) ) ) {
-			if ( get_option( 'at_block_manually_added_tags' ) ) {
+		if ( $existing_tags && ( ! get_option( 'autotasm_filter_by_category' ) || array_intersect( $post_categories, autotasm_included_categories() ) ) ) {
+			if ( get_option( 'autotasm_block_manually_added_tags' ) ) {
 				wp_delete_object_term_relationships( $the_post_id, 'post_tag' );
 			}
 
-			$minimum_length = get_option( 'at_minimum_tag_length', 3 );
-			$case_sensitive = get_option( 'at_case_sensitive' );
+			$minimum_length = get_option( 'autotasm_minimum_tag_length', 3 );
+			$case_sensitive = get_option( 'autotasm_case_sensitive' );
 			$found_tags = array();
 
 			foreach ( $existing_tags as $newtag ) {
@@ -73,14 +73,14 @@ function at_smart_tagging( $the_post_id ) {
 
 			// Apply found tags to the post
 			if ( ! empty( $found_tags ) ) {
-				wp_set_post_terms( $the_post_id, $found_tags, 'post_tag', ! get_option( 'at_block_manually_added_tags' ) );
+				wp_set_post_terms( $the_post_id, $found_tags, 'post_tag', ! get_option( 'autotasm_block_manually_added_tags' ) );
 			}
 		}
 	}
 }
 
 // Enhanced function to analyze content relevance
-function at_get_content_relevance_score( $tag_name, $content ) {
+function autotasm_get_content_relevance_score( $tag_name, $content ) {
 	$tag_name = strtolower( trim( $tag_name ) );
 	$content = strtolower( $content );
 	
@@ -95,7 +95,7 @@ function at_get_content_relevance_score( $tag_name, $content ) {
 }
 
 // Function to suggest new tags based on content
-function at_suggest_tags_from_content( $content, $limit = 10 ) {
+function autotasm_suggest_tags_from_content( $content, $limit = 10 ) {
 	// Remove common words
 	$common_words = array(
 		'the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by',
@@ -115,7 +115,7 @@ function at_suggest_tags_from_content( $content, $limit = 10 ) {
 	
 	// Filter words
 	$filtered_words = array_filter( $words, function( $word ) use ( $common_words ) {
-		return strlen( $word ) >= get_option( 'at_minimum_tag_length', 3 ) && 
+		return strlen( $word ) >= get_option( 'autotasm_minimum_tag_length', 3 ) && 
 			   ! in_array( $word, $common_words );
 	});
 	
@@ -126,10 +126,10 @@ function at_suggest_tags_from_content( $content, $limit = 10 ) {
 	return array_slice( array_keys( $word_freq ), 0, $limit );
 }
 
-if ( get_option( 'at_turn_on' ) && ! at_halt() ) {
+if ( get_option( 'autotasm_turn_on' ) && ! autotasm_halt() ) {
 	if ( function_exists( 'wp_after_insert_post' ) ) {
-		add_action( 'wp_after_insert_post', 'at_smart_tagging' );
+		add_action( 'wp_after_insert_post', 'autotasm_smart_tagging' );
 	} else {
-		add_action( 'wp_insert_post', 'at_smart_tagging' );
+		add_action( 'wp_insert_post', 'autotasm_smart_tagging' );
 	}
 }
