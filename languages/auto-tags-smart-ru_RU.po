@@ -1,0 +1,142 @@
+# Translation file for Auto Tags Smart
+# Copyright (C) 2025 Maison da Silva
+# This file is distributed under the same license as the Auto Tags Smart package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Auto Tags Smart 1.0\n"
+"Report-Msgid-Bugs-To: https://maisondasilva.com.br/\n"
+"POT-Creation-Date: 2025-07-21 12:28+0000\n"
+"PO-Revision-Date: 2025-08-06 08:45+0000\n"
+"Last-Translator: Eugene Fox <eugene@xfox111.net>\n"
+"Language-Team: Russian (Russia)\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#~ msgid "Auto Tags Smart"
+#~ msgstr "Умные Авто-метки"
+
+#~ msgid "Settings"
+#~ msgstr "Настройки"
+
+#: auto-tags-smart.php:29
+msgid "Select All"
+msgstr "Выбрать все"
+
+#: auto-tags-smart.php:30
+msgid "Deselect All"
+msgstr "Убрать выделение"
+
+#: auto-tags-smart.php:31
+msgid "STATUS: Active ✓"
+msgstr "СТАТУС: Активно ✓"
+
+#: auto-tags-smart.php:32
+msgid "STATUS: Active but nothing to examine"
+msgstr "СТАТУС: Активно, нет доступных заметок для анализа"
+
+#: auto-tags-smart.php:33
+msgid "STATUS: Inactive"
+msgstr "СТАТУС: Неактивно"
+
+#: admin/auto-tags-smart-admin.php:41
+msgid "Enable Auto Tags Smart"
+msgstr "Включить умные авто-метки"
+
+#: admin/auto-tags-smart-admin.php:42
+msgid "Enables automatic detection of existing tags in posts."
+msgstr "Включить автоматическое определение существующих меток в заметках."
+
+#: admin/auto-tags-smart-admin.php:49
+msgid "Block manually added tags"
+msgstr "Удалять пользовательские метки"
+
+#: admin/auto-tags-smart-admin.php:50
+msgid "Removes manually added tags and uses only automatically detected ones."
+msgstr "Когда включена, опция удаляет вручную указанные метки и использует только автоматически обнаруженные."
+
+#: admin/auto-tags-smart-admin.php:49
+msgid "Examine post title"
+msgstr "Использовать заголовки заметок"
+
+#: admin/auto-tags-smart-admin.php:50
+msgid "Analyzes the post title to find tags."
+msgstr "Анализировать заголовки заметок для поиска меток."
+
+#: admin/auto-tags-smart-admin.php:55
+msgid "Examine post content"
+msgstr "Использовать содержание заметок"
+
+#: admin/auto-tags-smart-admin.php:56
+msgid "Analyzes the post content to find tags."
+msgstr "Анализировать текст заметок для поиска меток."
+
+#: admin/auto-tags-smart-admin.php:62
+msgid "Filter by category"
+msgstr "Фильтровать по рубрикам"
+
+#: admin/auto-tags-smart-admin.php:63
+msgid "Only applies tags to posts in selected categories."
+msgstr "Применять метки только к заметкам из выбранных рубрик."
+
+#: admin/auto-tags-smart-admin.php:68
+msgid "Tag Length"
+msgstr "Длина меток"
+
+#: admin/auto-tags-smart-admin.php:73
+msgid "Minimum tag length"
+msgstr "Минимальная длина метки:"
+
+#: admin/auto-tags-smart-admin.php:74
+msgid "Tags with fewer characters than this will be ignored."
+msgstr "Метки с меньшим количеством символов будут игнорироваться."
+
+#: admin/auto-tags-smart-admin.php:79
+msgid "Case sensitive"
+msgstr "Учитывать регистр"
+
+#: admin/auto-tags-smart-admin.php:80
+msgid "Whether tag matching should be case sensitive."
+msgstr "Когда включено, будет учитывать регистр при поиске меток."
+
+#: admin/auto-tags-smart-admin.php:99
+msgid "Included Categories"
+msgstr "Отслеживаемые рубрики"
+
+#: admin/auto-tags-smart-admin.php:102
+msgid "Clean Uninstall"
+msgstr "Настройки удаления"
+
+#: admin/auto-tags-smart-admin.php:108
+msgid "Remove all plugin options from the database when uninstalling"
+msgstr "Удалять все настройки из базы данных при удалении плагина"
+
+#: admin/auto-tags-smart-admin.php:109
+msgid "When uninstalling, remove all plugin options from the database."
+msgstr "При удалении плагина, удалить все настройки плагина из базы данных."
+
+#: admin/auto-tags-smart-admin.php:117
+msgid "Save Settings"
+msgstr "Сохранить изменения"
+
+#: auto-tags-smart.php:131
+msgid "You must select at least one option: \"Examine title\" or \"Examine content\"."
+msgstr "Необходимо выбрать как минимум один вариант: \"Использовать заголовки заметок\" или \"Использовать содержание заметок\"."
+
+#: auto-tags-smart.php:132
+msgid "If you enable category filter, you must select at least one category."
+msgstr "Если вы включаете фильтрацию по рубрикам, необходимо выбрать хотя бы одну рубрику."
+
+#: auto-tags-smart.php:133
+msgid "Tag minimum length must be at least 1."
+msgstr "Минимальная длина метки не должна быть меньше 1."
+
+#: auto-tags-smart.php:134
+msgid "Tag minimum length cannot be greater than 50."
+msgstr "Минимальная длина метки не должна быть больше 50."
+
+#: auto-tags-smart.php:135
+msgid "Are you sure? This option will remove ALL plugin settings when it is uninstalled."
+msgstr "Вы уверены? Эта опция удалит ВСЕ настройки плагина при его удалении."
