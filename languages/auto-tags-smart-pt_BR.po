@@ -1,12 +1,13 @@
-# Copyright (C) 2025 Auto Tags Smart
+# Translation file for Auto Tags Smart
+# Copyright (C) 2025 Maison da Silva
 # This file is distributed under the same license as the Auto Tags Smart package.
 msgid ""
 msgstr ""
 "Project-Id-Version: Auto Tags Smart 1.0\n"
-"Report-Msgid-Bugs-To: https://maisondasilva.com.br/\n"
-"POT-Creation-Date: 2025-07-21 12:28-0300\n"
-"PO-Revision-Date: 2025-07-21 01:20+0000\n"
-"Last-Translator: Maison da Silva <contato@maisondasilva.com.br>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-04 09:00+0000\n"
+"PO-Revision-Date: 2025-08-04 09:00+0000\n"
+"Last-Translator: Maison da Silva\n"
 "Language-Team: Portuguese (Brazil)\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -14,32 +15,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: auto-tags-smart.php:98 auto-tags-smart.php:99
-#: admin/auto-tags-smart-admin.php:7
-msgid "Auto Tags Smart"
-msgstr "Auto Tags Smart"
-
-#: auto-tags-smart.php:111
-msgid "Settings"
-msgstr "Configurações"
-
-#: admin/auto-tags-smart-admin.php:12
+#: auto-tags-smart.php:29
 msgid "Select All"
 msgstr "Selecionar Todas"
 
-#: admin/auto-tags-smart-admin.php:13
+#: auto-tags-smart.php:30
 msgid "Deselect All"
 msgstr "Desmarcar Todas"
 
-#: admin/auto-tags-smart-admin.php:29
+#: auto-tags-smart.php:31
 msgid "STATUS: Active ✓"
 msgstr "STATUS: Ativo ✓"
 
-#: admin/auto-tags-smart-admin.php:31
+#: auto-tags-smart.php:32
 msgid "STATUS: Active but nothing to examine"
 msgstr "STATUS: Ativo mas nada para examinar"
 
-#: admin/auto-tags-smart-admin.php:33
+#: auto-tags-smart.php:33
 msgid "STATUS: Inactive"
 msgstr "STATUS: Inativo"
 
@@ -49,7 +41,7 @@ msgstr "Ativar Auto Tags Smart"
 
 #: admin/auto-tags-smart-admin.php:42
 msgid "Enables automatic detection of existing tags in posts."
-msgstr "Ativa a detecção automática de tags existentes nos posts."
+msgstr "Ativa a detecção automática de tags existentes em posts."
 
 #: admin/auto-tags-smart-admin.php:49
 msgid "Block manually added tags"
@@ -57,123 +49,88 @@ msgstr "Bloquear tags adicionadas manualmente"
 
 #: admin/auto-tags-smart-admin.php:50
 msgid "Removes manually added tags and uses only automatically detected ones."
-msgstr ""
-"Remove tags adicionadas manualmente e usa apenas as detectadas "
-"automaticamente."
+msgstr "Remove tags adicionadas manualmente e usa apenas as detectadas automaticamente."
 
-#: admin/auto-tags-smart-admin.php:57
+#: admin/auto-tags-smart-admin.php:49
 msgid "Examine post title"
 msgstr "Examinar título do post"
 
-#: admin/auto-tags-smart-admin.php:58
-msgid "Search for tags in the post title."
-msgstr "Procurar por tags no título do post."
+#: admin/auto-tags-smart-admin.php:50
+msgid "Analyzes the post title to find tags."
+msgstr "Analisa o título do post para encontrar tags."
 
-#: admin/auto-tags-smart-admin.php:65
+#: admin/auto-tags-smart-admin.php:55
 msgid "Examine post content"
 msgstr "Examinar conteúdo do post"
 
-#: admin/auto-tags-smart-admin.php:66
-msgid "Search for tags in the post content."
-msgstr "Procurar por tags no conteúdo do post."
+#: admin/auto-tags-smart-admin.php:56
+msgid "Analyzes the post content to find tags."
+msgstr "Analisa o conteúdo do post para encontrar tags."
 
-#: admin/auto-tags-smart-admin.php:73
+#: admin/auto-tags-smart-admin.php:62
 msgid "Filter by category"
 msgstr "Filtrar por categoria"
 
-#: admin/auto-tags-smart-admin.php:74
-msgid "Apply automatic tags only to specific categories."
-msgstr "Aplicar tags automáticas apenas em categorias específicas."
+#: admin/auto-tags-smart-admin.php:63
+msgid "Only applies tags to posts in selected categories."
+msgstr "Aplica tags apenas a posts nas categorias selecionadas."
 
-#: admin/auto-tags-smart-admin.php:79
+#: admin/auto-tags-smart-admin.php:68
+msgid "Tag Length"
+msgstr "Comprimento da Tag"
+
+#: admin/auto-tags-smart-admin.php:73
 msgid "Minimum tag length"
 msgstr "Comprimento mínimo da tag"
 
-#: admin/auto-tags-smart-admin.php:85
+#: admin/auto-tags-smart-admin.php:74
 msgid "Tags with fewer characters than this will be ignored."
 msgstr "Tags com menos caracteres que isso serão ignoradas."
 
-#: admin/auto-tags-smart-admin.php:92
+#: admin/auto-tags-smart-admin.php:79
 msgid "Case sensitive"
 msgstr "Sensível a maiúsculas/minúsculas"
 
-#: admin/auto-tags-smart-admin.php:93
-msgid "If enabled, \"PHP\" and \"php\" will be treated as different tags."
-msgstr "Se ativado, \"PHP\" e \"php\" serão tratados como tags diferentes."
+#: admin/auto-tags-smart-admin.php:80
+msgid "Whether tag matching should be case sensitive."
+msgstr "Se a correspondência de tags deve ser sensível a maiúsculas/minúsculas."
 
 #: admin/auto-tags-smart-admin.php:99
 msgid "Included Categories"
 msgstr "Categorias Incluídas"
 
-#: admin/auto-tags-smart-admin.php:127
+#: admin/auto-tags-smart-admin.php:102
 msgid "Clean Uninstall"
 msgstr "Limpeza na Desinstalação"
 
-#: admin/auto-tags-smart-admin.php:133
-msgid "Remove all options from database"
-msgstr "Remover todas as opções do banco de dados"
+#: admin/auto-tags-smart-admin.php:108
+msgid "Remove all plugin options from the database when uninstalling"
+msgstr "Remover todas as opções do plugin do banco de dados ao desinstalar"
 
-#: admin/auto-tags-smart-admin.php:134
-msgid "Removes all plugin settings when uninstalled (not on deactivation)."
-msgstr ""
-"Remove todas as configurações do plugin quando desinstalado (não na "
-"desativação)."
+#: admin/auto-tags-smart-admin.php:109
+msgid "When uninstalling, remove all plugin options from the database."
+msgstr "Ao desinstalar, remove todas as opções do plugin do banco de dados."
 
-#: admin/auto-tags-smart-admin.php:139
+#: admin/auto-tags-smart-admin.php:117
 msgid "Save Settings"
 msgstr "Salvar Configurações"
 
-#~ msgid ""
-#~ "Auto Tags Smart requires WordPress %s or higher. You are running version "
-#~ "%s. Please upgrade WordPress."
-#~ msgstr ""
-#~ "Auto Tags Smart requer WordPress %s ou superior. Você está executando a "
-#~ "versão %s. Por favor, atualize o WordPress."
+#: auto-tags-smart.php:131
+msgid "You must select at least one option: \"Examine title\" or \"Examine content\"."
+msgstr "Você deve selecionar pelo menos uma opção: \"Examinar título\" ou \"Examinar conteúdo\"."
 
-#~ msgid ""
-#~ "Auto Tags Smart requires PHP %s or higher. You are running version %s. "
-#~ "Please upgrade PHP."
-#~ msgstr ""
-#~ "Auto Tags Smart requer PHP %s ou superior. Você está executando a versão "
-#~ "%s. Por favor, atualize o PHP."
+#: auto-tags-smart.php:132
+msgid "If you enable category filter, you must select at least one category."
+msgstr "Se você ativar o filtro por categoria, deve selecionar pelo menos uma categoria."
 
-#~ msgid "📊 Plugin Statistics"
-#~ msgstr "📊 Estatísticas do Plugin"
+#: auto-tags-smart.php:133
+msgid "Tag minimum length must be at least 1."
+msgstr "O comprimento mínimo da tag deve ser pelo menos 1."
 
-#~ msgid "Published posts:"
-#~ msgstr "Posts publicados:"
+#: auto-tags-smart.php:134
+msgid "Tag minimum length cannot be greater than 50."
+msgstr "O comprimento mínimo da tag não pode ser maior que 50."
 
-#~ msgid "Total tags:"
-#~ msgstr "Total de tags:"
-
-#~ msgid "Auto Tags Smart is active and working!"
-#~ msgstr "Auto Tags Smart está ativo e funcionando!"
-
-#~ msgid "🚀 About Auto Tags Smart"
-#~ msgstr "🚀 Sobre o Auto Tags Smart"
-
-#~ msgid "Auto Tags Smart is an enhanced automatic tagging system, offering:"
-#~ msgstr ""
-#~ "O Auto Tags Smart é um sistema aprimorado de tags automáticas, oferecendo:"
-
-#~ msgid "Intelligent detection of existing tags"
-#~ msgstr "Detecção inteligente de tags existentes"
-
-#~ msgid "Advanced filter settings"
-#~ msgstr "Configurações avançadas de filtros"
-
-#~ msgid "Minimum tag length control"
-#~ msgstr "Controle de comprimento mínimo de tags"
-
-#~ msgid "Case sensitivity option"
-#~ msgstr "Opção de sensibilidade a maiúsculas/minúsculas"
-
-#~ msgid "Modern and intuitive interface"
-#~ msgstr "Interface moderna e intuitiva"
-
-#: admin/auto-tags-smart-admin.php:162
-msgid "Developed by"
-msgstr "Desenvolvido por"
-
-#~ msgid "Plugin developed by"
-#~ msgstr "Plugin desenvolvido por"
+#: auto-tags-smart.php:135
+msgid "Are you sure? This option will remove ALL plugin settings when it is uninstalled."
+msgstr "Tem certeza? Esta opção removerá TODAS as configurações do plugin quando ele for desinstalado."

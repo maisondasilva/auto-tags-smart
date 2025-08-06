@@ -36,7 +36,7 @@ Auto Tags Smart é um sistema avançado de tags automáticas que detecta e atrib
 = Como Funciona =
 
 1. Instale e ative o plugin
-2. Configure as opções na página "Auto Tags" no menu Posts
+2. Configure as opções na página "Auto Tags Smart" no menu Posts
 3. Escolha se deve examinar títulos, conteúdo ou ambos
 4. Configure filtros por categoria se necessário
 5. Ajuste as configurações avançadas conforme suas necessidades
@@ -52,18 +52,18 @@ O plugin irá automaticamente detectar tags existentes no seu conteúdo e aplic�
 
 == Installation ==
 
-1. Faça upload da pasta 'auto-tags' para o diretório '/wp-content/plugins/'
+1. Faça upload da pasta 'auto-tags-smart' para o diretório '/wp-content/plugins/'
 2. Ative o plugin através do menu 'Plugins' no WordPress
-3. Vá para Posts > Auto Tags para configurar as opções
+3. Vá para Posts > Auto Tags Smart para configurar as opções
 4. Configure as opções conforme suas necessidades
 5. Salve as configurações e comece a usar!
 
 = Instalação Manual =
 
 1. Baixe o arquivo zip do plugin
-2. Extraia os arquivos para '/wp-content/plugins/auto-tags'
+2. Extraia os arquivos para '/wp-content/plugins/auto-tags-smart'
 3. Ative o plugin no painel de administração
-4. Configure as opções em Posts > Auto Tags
+4. Configure as opções em Posts > Auto Tags Smart
 
 == Frequently Asked Questions ==
 

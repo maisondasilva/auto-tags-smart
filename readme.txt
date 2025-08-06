@@ -106,19 +106,21 @@ This depends on the "Clean Uninstall" setting. If enabled, all settings will be 
 
 = 1.0 =
 * Initial release of Auto Tags Smart
-* Smart detection of existing tags
-* Advanced filter settings
+* Smart detection of existing tags with WordPress.org compliance
+* Proper wp_enqueue_script() and wp_enqueue_style() implementation
+* Secure function prefixes (autotasm_) meeting 4+ character requirement
+* Advanced filter settings with category selection
 * Modern and responsive interface
 * Minimum tag length control
 * Case sensitivity option
-* Category filters
+* Translation support via wp_localize_script()
 * Statistics system
 * Complete cleanup on uninstall
 
 == Upgrade Notice ==
 
 = 1.0 =
-First version of Auto Tags Smart. An evolution of traditional automatic tagging systems with advanced features and modern interface.
+First release of Auto Tags Smart with full WordPress.org compliance. Features smart tag detection, advanced filtering, and modern interface with proper security implementation.
 
 == Developer Notes ==
 
