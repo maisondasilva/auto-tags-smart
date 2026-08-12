@@ -1,0 +1,240 @@
+:root {
+    --aet-ink: #1f2d3d;
+    --aet-muted: #526173;
+    --aet-surface: #ffffff;
+    --aet-bg: #f4f7fb;
+    --aet-card-border: #d7dee8;
+    --aet-accent: #0f9d8a;
+    --aet-accent-soft: #d8f6f0;
+    --aet-danger-soft: #ffe4e2;
+    --aet-warning-soft: #fff4cf;
+    --aet-shadow: 0 12px 30px rgba(31, 45, 61, 0.08);
+}
+
+.aet-admin {
+    margin-top: 12px;
+    max-width: 1240px;
+    color: var(--aet-ink);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.aet-hero {
+    background: linear-gradient(120deg, #eef7ff 0%, #f7fff8 100%);
+    border: 1px solid var(--aet-card-border);
+    border-radius: 16px;
+    box-shadow: var(--aet-shadow);
+    padding: 16px 20px;
+    margin-bottom: 10px;
+}
+
+.aet-hero h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.aet-hero p {
+    margin: 6px 0 0;
+    color: var(--aet-muted);
+    font-size: 14px;
+}
+
+.aet-status {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    border-radius: 999px;
+    padding: 6px 12px;
+    margin: 0 0 10px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.aet-status-enabled {
+    background: var(--aet-accent-soft);
+    color: #0d6b5f;
+}
+
+.aet-status-warning {
+    background: var(--aet-warning-soft);
+    color: #8e6a00;
+}
+
+.aet-status-disabled {
+    background: var(--aet-danger-soft);
+    color: #a03d35;
+}
+
+.aet-card {
+    background: var(--aet-surface);
+    border: 1px solid var(--aet-card-border);
+    border-radius: 12px;
+    box-shadow: var(--aet-shadow);
+    padding: 8px 10px;
+    margin-bottom: 10px;
+}
+
+.aet-card h2 {
+    margin: 1px 1px 6px;
+    font-size: 13px;
+    color: var(--aet-ink);
+}
+
+.aet-card .form-table {
+    margin: 0;
+}
+
+.aet-card .form-table td {
+    padding: 6px 4px;
+}
+
+.aet-card input[type="checkbox"] {
+    transform: translateY(1px);
+}
+
+.aet-card label {
+    margin-left: 8px;
+    font-size: 13px;
+    color: var(--aet-ink);
+}
+
+.aet-categories-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+}
+
+.aet-category-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    width: auto;
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+.aet-category-actions .button {
+    min-height: 26px;
+    line-height: 24px;
+    padding: 0 8px;
+    border-radius: 7px;
+    font-size: 11px;
+}
+
+#included-categories,
+#categories-container {
+    transition: opacity 0.35s ease;
+}
+
+#included-categories.softened,
+#categories-container.softened {
+    opacity: 0.28;
+}
+
+#categories-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+    gap: 4px;
+    margin-top: 2px;
+}
+
+#categories-container-mask {
+    display: none;
+}
+
+#categories-container-mask.active {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.category-block {
+    display: flex;
+    align-items: center;
+    min-height: 30px;
+    border: 1px solid var(--aet-card-border);
+    border-radius: 7px;
+    padding: 2px 6px;
+    background: #fbfdff;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-block:hover {
+    border-color: #9bc5ef;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(31, 45, 61, 0.08);
+}
+
+.category-block label {
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.aet-submit-wrap {
+    margin: 10px 0 8px;
+}
+
+.aet-submit-wrap .button-primary {
+    background: var(--aet-accent);
+    border-color: var(--aet-accent);
+    border-radius: 8px;
+    padding: 2px 14px;
+    box-shadow: none;
+}
+
+.aet-submit-wrap .button-primary:hover,
+.aet-submit-wrap .button-primary:focus {
+    background: #0b8575;
+    border-color: #0b8575;
+}
+
+.aet-footer-note {
+    padding: 2px 2px;
+    color: var(--aet-muted);
+    font-size: 12px;
+}
+
+.aet-footer-note h3 {
+    margin: 8px 0 4px;
+    color: var(--aet-ink);
+    font-size: 13px;
+}
+
+.aet-footer-note a {
+    color: #0f6fc1;
+    text-decoration: none;
+}
+
+.aet-footer-note a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 782px) {
+    .aet-admin {
+        margin-right: 10px;
+    }
+
+    .aet-hero {
+        padding: 12px;
+    }
+
+    .aet-hero h1 {
+        font-size: 17px;
+    }
+
+    .aet-card {
+        padding: 10px;
+    }
+
+    #categories-container {
+        grid-template-columns: 1fr;
+    }
+}
