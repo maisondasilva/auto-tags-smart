@@ -1,19 +1,20 @@
-# Auto Tags Inteligentes
+# Auto Tags Smart
 
-Auto Tags Inteligentes is a WordPress plugin that automatically assigns existing tags to posts by scanning the title and/or content.
+Auto Tags Smart is a WordPress plugin that automatically assigns existing tags to posts by scanning the title and/or content.
 
-It helps you reuse the tags you already created instead of manually tagging posts one by one, and can optionally create a new tag from the post title when no match exists.
+It helps you reuse the tags you already created instead of manually tagging posts one by one, and can optionally create missing tags from analyzed content.
 
 ## Features
 
 - Automatically assigns existing tags when a post is created or updated.
 - Option to scan the post title, the post content, or both.
-- Optional creation of a new tag from the post title when title analysis is enabled.
+- Optional creation of missing tags from analyzed content.
 - Option to block manually added tags and replace them with detected tags.
 - Optional category filter to limit which posts are processed.
 - Bulk actions to select or clear all categories in the admin screen.
 - Clean uninstall option to remove plugin settings from the database.
 - Translation support with `languages/` files.
+- Dynamic candidate limits by post size: 10, 14, 20, and max 25.
 
 ## Requirements
 
@@ -24,7 +25,7 @@ It helps you reuse the tags you already created instead of manually tagging post
 
 1. Upload the `auto-tags-smart` folder to `/wp-content/plugins/`.
 2. Activate the plugin from the WordPress Plugins screen.
-3. Open `Posts -> Auto Tags Inteligentes` and configure the options.
+3. Open `Posts -> Auto Tags Smart` and configure the options.
 
 ## How It Works
 
@@ -36,7 +37,7 @@ When a post is saved, the plugin checks the selected fields:
 
 If a tag already exists in the site and matches the post text, it is added automatically to the post.
 
-If title analysis is enabled and the new option is turned on, the plugin can create a tag from the post title when no matching tag exists yet.
+If missing-tag creation is enabled, the plugin can create tags from analyzed content (title, content, or both depending on your settings).
 
 ## Translation
 
@@ -66,16 +67,24 @@ The plugin includes a clean admin panel with:
 
 ## Changelog
 
+### 1.0.4
+
+- Release version bump and packaging sync.
+
+### 1.0.3
+
+- Unique plugin version constant to avoid constant collision in older environments.
+
+### 1.0.2
+
+- Optional creation of missing tags from analyzed content.
+- Dynamic candidate limits by analyzed text size (10/14/20/25).
+
 ### 1.0.1
 
 - Improved admin layout spacing
 - Better category controls
 - Version bump for cache busting
-
-### 1.0.2
-
-- Optional creation of tags from the post title
-- New admin toggle for missing tag creation
 
 ### 1.0
 

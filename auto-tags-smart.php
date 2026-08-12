@@ -3,7 +3,7 @@
 Plugin Name: Auto Tags Smart
 Plugin URI: https://github.com/maisondasilva/auto-tags-smart
 Description: Looks for existing tags within your posts and can optionally create a tag from the post title.
-Version: 1.0.2
+Version: 1.0.4
 Author: Maison da Silva
 Author URI: https://maisondasilva.com.br/
 License: GPLv2 or later
@@ -12,13 +12,56 @@ Domain Path: /languages
 */
 
 defined( 'ABSPATH' ) || die( 'Cannot access pages directly.' );
-defined( 'AET_PLUGIN_VER' ) || define( 'AET_PLUGIN_VER', '1.0.2' );
+defined( 'AETS_PLUGIN_VER' ) || define( 'AETS_PLUGIN_VER', '1.0.4' );
 defined( 'AET_TEXT_DOMAIN' ) || define( 'AET_TEXT_DOMAIN', 'auto-tags-smart' );
 
 function aet_load_textdomain() {
 	load_plugin_textdomain( AET_TEXT_DOMAIN, false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 }
 add_action( 'plugins_loaded', 'aet_load_textdomain' );
+
+function aet_pt_br_fallback_gettext( $translated_text, $text, $domain ) {
+	if ( 'auto-tags-smart' !== $domain ) {
+		return $translated_text;
+	}
+
+	if ( 0 !== strpos( (string) get_locale(), 'pt_BR' ) ) {
+		return $translated_text;
+	}
+
+	$map = array(
+		'Auto Tags Smart' => 'Auto Tags Inteligentes',
+		'Automatically tag posts using existing tags.' => 'Marque automaticamente com tags existentes.',
+		'Enabled' => 'Ativo',
+		'Enabled, but there is nothing to examine' => 'Ativo, mas nao ha nada para analisar',
+		'Disabled' => 'Desativado',
+		'Status' => 'Status',
+		'Main Settings' => 'Configuracao Principal',
+		'Turn on plugin.' => 'Ativar plugin.',
+		'Block manually added tags (previous tags are removed on update).' => 'Bloquear tags manuais (tags anteriores sao removidas ao atualizar).',
+		'Examine post title.' => 'Analisar titulo do post.',
+		'Examine post content.' => 'Analisar conteudo do post.',
+		'Filter by category.' => 'Filtrar por categoria.',
+		'Create missing tags from analyzed content.' => 'Criar tags ausentes a partir do conteudo analisado.',
+		'Select all' => 'Selecionar todas',
+		'Clear all' => 'Limpar selecao',
+		'Included Categories' => 'Categorias Incluidas',
+		'Clean Uninstall' => 'Limpeza na Desinstalacao',
+		'Delete all options from database when deleting this plugin.' => 'Excluir todas as opcoes do banco ao remover este plugin.',
+		'Save Changes' => 'Salvar Alteracoes',
+		'Do you like this plugin?' => 'Gostou do plugin?',
+		'Rate it on the repository.' => 'Avalie no repositorio.',
+		'Thank you!' => 'Obrigado!',
+		'Settings' => 'Configuracoes',
+	);
+
+	if ( isset( $map[ $text ] ) ) {
+		return $map[ $text ];
+	}
+
+	return $translated_text;
+}
+add_filter( 'gettext', 'aet_pt_br_fallback_gettext', 10, 3 );
 
 function aet_register_the_settings() {
 	register_setting(
@@ -96,8 +139,8 @@ function aet_sanitize_included_categories( $values ) {
 }
 
 function aet_enqueue_assets() {
-	wp_enqueue_style( 'aet-admin-css', plugins_url( 'admin/auto-tags-smart-admin.css', __FILE__ ), array(), AET_PLUGIN_VER );
-	wp_enqueue_script( 'aet-admin-js', plugins_url( 'admin/auto-tags-smart-admin.js', __FILE__ ), array( 'jquery' ), AET_PLUGIN_VER, true );
+	wp_enqueue_style( 'aet-admin-css', plugins_url( 'admin/auto-tags-smart-admin.css', __FILE__ ), array(), AETS_PLUGIN_VER );
+	wp_enqueue_script( 'aet-admin-js', plugins_url( 'admin/auto-tags-smart-admin.js', __FILE__ ), array( 'jquery' ), AETS_PLUGIN_VER, true );
 }
 add_action( 'admin_enqueue_scripts', 'aet_enqueue_assets' );
 

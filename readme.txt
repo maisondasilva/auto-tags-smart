@@ -4,7 +4,7 @@ Contributors: maisondasilva
 Tags: automatic tags, auto tagger, auto tagging, tagging, tags
 Requires at least: 4.0
 Tested up to: 7.0
-Stable tag: 1.0.2
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -60,6 +60,12 @@ Yes. The plugin works with valid UTF-8 characters.
 * Better category controls
 * Added cache-busting version bump
 * Updated translation handling
+
+= 1.0.4 =
+* Version bump for release packaging.
+
+= 1.0.3 =
+* Updated plugin version constant to avoid conflicts with older installs or other plugins.
 
 = 1.0.2 =
 * Optional creation of tags from the post title
