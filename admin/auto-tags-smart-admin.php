@@ -140,7 +140,7 @@ defined( 'ABSPATH' ) || die( 'Cannot access pages directly.' );
 			<a href="https://github.com/maisondasilva/auto-tags-smart" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Rate it on the repository.', 'auto-tags-smart' ); ?></a>
 		</p>
 		<p><?php esc_html_e( 'Thank you!', 'auto-tags-smart' ); ?></p>
-		<p>Versão 1.0 | Por <a href="https://maisondasilva.com.br/" target="_blank" rel="noopener noreferrer">Maison da Silva</a></p>
+		<p>Versão <?php echo esc_html( AETS_PLUGIN_VER ); ?> | Por <a href="https://maisondasilva.com.br/" target="_blank" rel="noopener noreferrer">Maison da Silva</a></p>
 	</div>
 </div>
 
