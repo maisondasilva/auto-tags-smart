@@ -7,7 +7,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-msgid "Auto Tags Inteligentes"
+msgid "Auto Tags Smart"
 msgstr "Auto Tags Inteligentes"
 
 msgid "Settings"
@@ -45,6 +45,9 @@ msgstr "Analisar conteudo do post."
 
 msgid "Filter by category."
 msgstr "Filtrar por categoria."
+
+msgid "Create missing tags from analyzed content."
+msgstr "Criar tags ausentes a partir do conteúdo analisado."
 
 msgid "Select all"
 msgstr "Selecionar todas"

@@ -7,7 +7,7 @@ msgstr ""
 "X-Domain: auto-tags-smart\n"
 
 #: auto-tags-smart.php
-msgid "Auto Tags Inteligentes"
+msgid "Auto Tags Smart"
 msgstr ""
 
 #: auto-tags-smart.php
@@ -56,6 +56,10 @@ msgstr ""
 
 #: admin/auto-tags-smart-admin.php
 msgid "Filter by category."
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php
+msgid "Create missing tags from analyzed content."
 msgstr ""
 
 #: admin/auto-tags-smart-admin.php
