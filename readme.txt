@@ -1,10 +1,10 @@
-=== Auto Tags Inteligentes ===
+=== Auto Tags Smart ===
 
 Contributors: maisondasilva
-Tags: automatic tags, auto tagger, auto tagging, tagging, tags, wordpress, post tags
+Tags: automatic tags, auto tagger, auto tagging, tagging, tags
 Requires at least: 4.0
-Tested up to: 6.8
-Stable tag: 1.0.1
+Tested up to: 7.0
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,12 +15,13 @@ Automatically assign existing tags to posts based on their title and/or content.
 
 Auto Tags Inteligentes scans posts when they are created or updated and automatically adds matching tags that already exist on your site.
 
-The plugin is designed to keep your tagging workflow fast and consistent while avoiding duplicate tag creation.
+The plugin is designed to keep your tagging workflow fast and consistent while avoiding duplicate tag creation. When title analysis is enabled, it can also create a tag from the post title if no match exists.
 
 = Features =
 
 * Automatically assigns existing tags to posts.
 * Scan the post title, the content, or both.
+* Optional creation of a new tag from the post title.
 * Option to replace manually added tags with detected tags.
 * Optional category filter to limit which posts are processed.
 * Select all / clear all category controls in the admin screen.
@@ -59,6 +60,10 @@ Yes. The plugin works with valid UTF-8 characters.
 * Better category controls
 * Added cache-busting version bump
 * Updated translation handling
+
+= 1.0.2 =
+* Optional creation of tags from the post title
+* New admin toggle for missing tag creation
 
 = 1.0 =
 * Initial public release under the new branding

@@ -2,12 +2,13 @@
 
 Auto Tags Inteligentes is a WordPress plugin that automatically assigns existing tags to posts by scanning the title and/or content.
 
-It helps you reuse the tags you already created instead of manually tagging posts one by one.
+It helps you reuse the tags you already created instead of manually tagging posts one by one, and can optionally create a new tag from the post title when no match exists.
 
 ## Features
 
 - Automatically assigns existing tags when a post is created or updated.
 - Option to scan the post title, the post content, or both.
+- Optional creation of a new tag from the post title when title analysis is enabled.
 - Option to block manually added tags and replace them with detected tags.
 - Optional category filter to limit which posts are processed.
 - Bulk actions to select or clear all categories in the admin screen.
@@ -34,6 +35,8 @@ When a post is saved, the plugin checks the selected fields:
 - Categories
 
 If a tag already exists in the site and matches the post text, it is added automatically to the post.
+
+If title analysis is enabled and the new option is turned on, the plugin can create a tag from the post title when no matching tag exists yet.
 
 ## Translation
 
@@ -68,6 +71,11 @@ The plugin includes a clean admin panel with:
 - Improved admin layout spacing
 - Better category controls
 - Version bump for cache busting
+
+### 1.0.2
+
+- Optional creation of tags from the post title
+- New admin toggle for missing tag creation
 
 ### 1.0
 
