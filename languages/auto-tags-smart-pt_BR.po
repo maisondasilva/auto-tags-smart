@@ -1,0 +1,74 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Auto Tags Inteligentes 2.4\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Auto Tags Inteligentes"
+msgstr "Auto Tags Inteligentes"
+
+msgid "Settings"
+msgstr "Configuracoes"
+
+msgid "Automatically tag posts using existing tags."
+msgstr "Marque automaticamente com tags existentes."
+
+msgid "Enabled"
+msgstr "Ativo"
+
+msgid "Enabled, but there is nothing to examine"
+msgstr "Ativo, mas nao ha nada para analisar"
+
+msgid "Disabled"
+msgstr "Desativado"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Main Settings"
+msgstr "Configuracao Principal"
+
+msgid "Turn on plugin."
+msgstr "Ativar plugin."
+
+msgid "Block manually added tags (previous tags are removed on update)."
+msgstr "Bloquear tags manuais (tags anteriores sao removidas ao atualizar)."
+
+msgid "Examine post title."
+msgstr "Analisar titulo do post."
+
+msgid "Examine post content."
+msgstr "Analisar conteudo do post."
+
+msgid "Filter by category."
+msgstr "Filtrar por categoria."
+
+msgid "Select all"
+msgstr "Selecionar todas"
+
+msgid "Clear all"
+msgstr "Limpar selecao"
+
+msgid "Included Categories"
+msgstr "Categorias Incluidas"
+
+msgid "Clean Uninstall"
+msgstr "Limpeza na Desinstalacao"
+
+msgid "Delete all options from database when deleting this plugin."
+msgstr "Excluir todas as opcoes do banco ao remover este plugin."
+
+msgid "Save Changes"
+msgstr "Salvar Alteracoes"
+
+msgid "Do you like this plugin?"
+msgstr "Gostou do plugin?"
+
+msgid "Rate it on the repository."
+msgstr "Avalie no repositorio."
+
+msgid "Thank you!"
+msgstr "Obrigado!"

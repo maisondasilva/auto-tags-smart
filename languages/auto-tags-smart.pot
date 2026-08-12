@@ -1,0 +1,95 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Auto Tags Inteligentes 2.4\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: auto-tags-smart\n"
+
+#: auto-tags-smart.php
+msgid "Auto Tags Inteligentes"
+msgstr ""
+
+#: auto-tags-smart.php
+msgid "Settings"
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php
+msgid "Automatically tag posts using existing tags."
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php
+msgid "Enabled"
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php
+msgid "Enabled, but there is nothing to examine"
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php
+msgid "Disabled"
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php
+msgid "Status"
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php
+msgid "Main Settings"
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php
+msgid "Turn on plugin."
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php
+msgid "Block manually added tags (previous tags are removed on update)."
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php
+msgid "Examine post title."
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php
+msgid "Examine post content."
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php
+msgid "Filter by category."
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php
+msgid "Select all"
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php
+msgid "Clear all"
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php
+msgid "Included Categories"
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php
+msgid "Clean Uninstall"
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php
+msgid "Delete all options from database when deleting this plugin."
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php
+msgid "Save Changes"
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php
+msgid "Do you like this plugin?"
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php
+msgid "Rate it on the repository."
+msgstr ""
+
+#: admin/auto-tags-smart-admin.php
+msgid "Thank you!"
+msgstr ""

@@ -1,0 +1,74 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Auto Tags Inteligentes 2.4\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Auto Tags Inteligentes"
+msgstr "Smart Auto Tags"
+
+msgid "Settings"
+msgstr "Settings"
+
+msgid "Automatically tag posts using existing tags."
+msgstr "Automatically tag posts using existing tags."
+
+msgid "Enabled"
+msgstr "Enabled"
+
+msgid "Enabled, but there is nothing to examine"
+msgstr "Enabled, but there is nothing to examine"
+
+msgid "Disabled"
+msgstr "Disabled"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Main Settings"
+msgstr "Main Settings"
+
+msgid "Turn on plugin."
+msgstr "Turn on plugin."
+
+msgid "Block manually added tags (previous tags are removed on update)."
+msgstr "Block manually added tags (previous tags are removed on update)."
+
+msgid "Examine post title."
+msgstr "Examine post title."
+
+msgid "Examine post content."
+msgstr "Examine post content."
+
+msgid "Filter by category."
+msgstr "Filter by category."
+
+msgid "Select all"
+msgstr "Select all"
+
+msgid "Clear all"
+msgstr "Clear all"
+
+msgid "Included Categories"
+msgstr "Included Categories"
+
+msgid "Clean Uninstall"
+msgstr "Clean Uninstall"
+
+msgid "Delete all options from database when deleting this plugin."
+msgstr "Delete all options from database when deleting this plugin."
+
+msgid "Save Changes"
+msgstr "Save Changes"
+
+msgid "Do you like this plugin?"
+msgstr "Do you like this plugin?"
+
+msgid "Rate it on the repository."
+msgstr "Rate it on the repository."
+
+msgid "Thank you!"
+msgstr "Thank you!"
