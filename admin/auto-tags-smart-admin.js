@@ -1,8 +1,8 @@
 jQuery(function($) {
     'use strict';
 
-    var $filterByCategory = $('#aet-filter-by-category');
-    var categorySelector = '#categories-container input[name="aet_included_categories[]"]';
+    var $filterByCategory = $('#aets-filter-by-category');
+    var categorySelector = '#aets-categories-container input[name="aets_included_categories[]"]';
 
     function getCategoryToggles() {
         return $(categorySelector);
@@ -16,16 +16,16 @@ jQuery(function($) {
 
     function syncCategoryPanelState() {
         var isEnabled = $filterByCategory.is(':checked');
-        var $selectAllButton = $('#aet-select-all-categories');
-        var $clearAllButton = $('#aet-clear-all-categories');
+        var $selectAllButton = $('#aets-select-all-categories');
+        var $clearAllButton = $('#aets-clear-all-categories');
 
-        $('#included-categories, #categories-container').toggleClass('softened', !isEnabled);
-        $('#categories-container-mask').toggleClass('active', !isEnabled);
+        $('#aets-included-categories, #aets-categories-container').toggleClass('aets-softened', !isEnabled);
+        $('#aets-categories-container-mask').toggleClass('aets-active', !isEnabled);
         $selectAllButton.prop('disabled', !isEnabled);
         $clearAllButton.prop('disabled', !isEnabled);
     }
 
-    $(document).on('click', '#aet-select-all-categories', function(event) {
+    $(document).on('click', '#aets-select-all-categories', function(event) {
         event.preventDefault();
         event.stopPropagation();
 
@@ -37,7 +37,7 @@ jQuery(function($) {
         toggleAllCategories(true);
     });
 
-    $(document).on('click', '#aet-clear-all-categories', function(event) {
+    $(document).on('click', '#aets-clear-all-categories', function(event) {
         event.preventDefault();
         event.stopPropagation();
 
@@ -50,12 +50,12 @@ jQuery(function($) {
     });
 
     // Defensive binding for environments where delegated handlers are delayed.
-    $('#aet-select-all-categories').on('click', function(event) {
+    $('#aets-select-all-categories').on('click', function(event) {
         event.preventDefault();
         toggleAllCategories(true);
     });
 
-    $('#aet-clear-all-categories').on('click', function(event) {
+    $('#aets-clear-all-categories').on('click', function(event) {
         event.preventDefault();
         toggleAllCategories(false);
     });
