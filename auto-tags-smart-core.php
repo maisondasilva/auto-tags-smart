@@ -1,8 +1,8 @@
 <?php
 defined( 'ABSPATH' ) || die( 'Cannot access pages directly.' );
 
-function aet_included_categories() {
-	$included = get_option( 'aet_included_categories' );
+function aets_included_categories() {
+	$included = get_option( 'aets_included_categories' );
 
 	if ( empty( $included ) ) {
 		return array();
@@ -22,15 +22,15 @@ function aet_included_categories() {
 	return array_values( array_unique( $included ) );
 }
 
-function aet_normalize_tag_name( $tag_name ) {
+function aets_normalize_tag_name( $tag_name ) {
 	$tag_name = trim( wp_strip_all_tags( (string) $tag_name ) );
 	$tag_name = preg_replace( '/\s+/', ' ', $tag_name );
 
 	return $tag_name ? $tag_name : '';
 }
 
-function aet_extract_tag_candidates( $text ) {
-	$text = strtolower( aet_normalize_tag_name( $text ) );
+function aets_extract_tag_candidates( $text ) {
+	$text = strtolower( aets_normalize_tag_name( $text ) );
 	$text = preg_replace( '/[^\p{L}\p{N}\s-]+/u', ' ', $text );
 	$parts = preg_split( '/\s+/', $text, -1, PREG_SPLIT_NO_EMPTY );
 
@@ -60,18 +60,18 @@ function aet_extract_tag_candidates( $text ) {
 	return $candidates;
 }
 
-function aet_count_words( $text ) {
+function aets_count_words( $text ) {
 	$text  = trim( wp_strip_all_tags( (string) $text ) );
 	$parts = preg_split( '/\s+/', $text, -1, PREG_SPLIT_NO_EMPTY );
 
 	return is_array( $parts ) ? count( $parts ) : 0;
 }
 
-function aet_dynamic_tags_limit( $sources ) {
+function aets_dynamic_tags_limit( $sources ) {
 	$total_words = 0;
 
 	foreach ( (array) $sources as $source_text ) {
-		$total_words += aet_count_words( $source_text );
+		$total_words += aets_count_words( $source_text );
 	}
 
 	if ( $total_words <= 400 ) {
@@ -89,14 +89,14 @@ function aet_dynamic_tags_limit( $sources ) {
 	return 25;
 }
 
-function aet_halt() {
-	$examine_post = get_option( 'aet_examine_post_title' ) || get_option( 'aet_examine_post_content' );
+function aets_halt() {
+	$examine_post = get_option( 'aets_examine_post_title' ) || get_option( 'aets_examine_post_content' );
 
-	return ! $examine_post || ( get_option( 'aet_filter_by_category' ) && empty( aet_included_categories() ) );
+	return ! $examine_post || ( get_option( 'aets_filter_by_category' ) && empty( aets_included_categories() ) );
 }
 
-function aet_tagging( $the_post_id ) {
-	if ( ! get_option( 'aet_turn_on' ) || aet_halt() ) {
+function aets_tagging( $the_post_id ) {
+	if ( ! get_option( 'aets_turn_on' ) || aets_halt() ) {
 		return;
 	}
 
@@ -108,15 +108,15 @@ function aet_tagging( $the_post_id ) {
 
 	if ( 'post' === $post->post_type ) {
 		$post_categories = ( get_the_terms( $the_post_id, 'category' ) ) ? wp_list_pluck( get_the_terms( $the_post_id, 'category' ), 'term_id' ) : array();
-		$category_match  = ! get_option( 'aet_filter_by_category' ) || array_intersect( $post_categories, aet_included_categories() );
+		$category_match  = ! get_option( 'aets_filter_by_category' ) || array_intersect( $post_categories, aets_included_categories() );
 		$search_sources  = array();
 
-		if ( get_option( 'aet_examine_post_title' ) ) {
+		if ( get_option( 'aets_examine_post_title' ) ) {
 			$the_post_title  = wp_strip_all_tags( (string) $post->post_title );
 			$search_sources[] = $the_post_title;
 		}
 
-		if ( get_option( 'aet_examine_post_content' ) ) {
+		if ( get_option( 'aets_examine_post_content' ) ) {
 			$the_post_content  = wp_strip_all_tags( (string) $post->post_content );
 			$search_sources[] = $the_post_content;
 		}
@@ -129,12 +129,12 @@ function aet_tagging( $the_post_id ) {
 		);
 
 		if ( $existing_tags && $category_match ) {
-			if ( get_option( 'aet_block_manually_added_tags' ) ) {
+			if ( get_option( 'aets_block_manually_added_tags' ) ) {
 				wp_delete_object_term_relationships( $the_post_id, 'post_tag' );
 			}
 
 			foreach ( $existing_tags as $newtag ) {
-				$pattern = preg_quote( aet_normalize_tag_name( $newtag->name ), '/' );
+				$pattern = preg_quote( aets_normalize_tag_name( $newtag->name ), '/' );
 				$pattern = '/\b' . $pattern . '\b/ui';
 
 				foreach ( $search_sources as $source_text ) {
@@ -146,13 +146,13 @@ function aet_tagging( $the_post_id ) {
 			}
 		}
 
-		if ( $category_match && get_option( 'aet_create_missing_tags', '1' ) && ! empty( $search_sources ) ) {
-			$max_auto_tags       = aet_dynamic_tags_limit( $search_sources );
+		if ( $category_match && get_option( 'aets_create_missing_tags', '1' ) && ! empty( $search_sources ) ) {
+			$max_auto_tags       = aets_dynamic_tags_limit( $search_sources );
 			$processed_candidates = array();
 			$processed_count      = 0;
 
 			foreach ( $search_sources as $source_text ) {
-				foreach ( aet_extract_tag_candidates( $source_text ) as $candidate ) {
+				foreach ( aets_extract_tag_candidates( $source_text ) as $candidate ) {
 					if ( $processed_count >= $max_auto_tags ) {
 						break 2;
 					}
@@ -182,7 +182,7 @@ function aet_tagging( $the_post_id ) {
 }
 
 if ( function_exists( 'wp_after_insert_post' ) ) {
-	add_action( 'wp_after_insert_post', 'aet_tagging' );
+	add_action( 'wp_after_insert_post', 'aets_tagging' );
 } else {
-	add_action( 'wp_insert_post', 'aet_tagging' );
+	add_action( 'wp_insert_post', 'aets_tagging' );
 }

@@ -67,6 +67,18 @@ The plugin includes a clean admin panel with:
 
 ## Changelog
 
+### 1.0.7
+
+- Switched to the standard WordPress PO/MO translation workflow.
+
+### 1.0.6
+
+- Completed prefixing of plugin declarations, settings, stored data, and admin selectors.
+
+### 1.0.5
+
+- Prefixed plugin declarations, stored options, settings identifiers, and admin selectors to reduce naming collisions.
+
 ### 1.0.4
 
 - Release version bump and packaging sync.

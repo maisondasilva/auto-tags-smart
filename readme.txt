@@ -4,7 +4,7 @@ Contributors: maisondasilva
 Tags: automatic tags, auto tagger, auto tagging, tagging, tags
 Requires at least: 4.0
 Tested up to: 7.0
-Stable tag: 1.0.4
+Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,15 +13,15 @@ Automatically assign existing tags to posts based on their title and/or content.
 
 == Description ==
 
-Auto Tags Inteligentes scans posts when they are created or updated and automatically adds matching tags that already exist on your site.
+Auto Tags Smart scans posts when they are created or updated and automatically adds matching tags that already exist on your site.
 
-The plugin is designed to keep your tagging workflow fast and consistent while avoiding duplicate tag creation. When title analysis is enabled, it can also create a tag from the post title if no match exists.
+The plugin is designed to keep your tagging workflow fast and consistent while avoiding duplicate tag creation. It can also create missing tags from the analyzed title and/or content when that option is enabled.
 
 = Features =
 
 * Automatically assigns existing tags to posts.
 * Scan the post title, the content, or both.
-* Optional creation of a new tag from the post title.
+* Optional creation of missing tags from analyzed content.
 * Option to replace manually added tags with detected tags.
 * Optional category filter to limit which posts are processed.
 * Select all / clear all category controls in the admin screen.
@@ -33,7 +33,7 @@ The plugin is designed to keep your tagging workflow fast and consistent while a
 
 1. Upload the `auto-tags-smart` folder to `/wp-content/plugins/`.
 2. Activate the plugin in the WordPress Plugins screen.
-3. Open `Posts -> Auto Tags Inteligentes` and configure the settings.
+3. Open `Posts -> Auto Tags Smart` and configure the settings.
 
 
 == Frequently Asked Questions ==
@@ -50,16 +50,19 @@ Yes. The plugin works with valid UTF-8 characters.
 
 == Screenshots ==
 
-1. Auto Tags Inteligentes - administration panel
+1. Auto Tags Smart - administration panel
 
 
 == Changelog ==
 
-= 1.0.1 =
-* Improved admin layout spacing
-* Better category controls
-* Added cache-busting version bump
-* Updated translation handling
+= 1.0.7 =
+* Switched to the standard WordPress PO/MO translation workflow.
+
+= 1.0.6 =
+* Completed prefixing of plugin declarations, settings, stored data, and admin selectors.
+
+= 1.0.5 =
+* Prefixed plugin declarations, stored options, settings identifiers, and admin selectors to reduce naming collisions.
 
 = 1.0.4 =
 * Version bump for release packaging.
@@ -70,6 +73,12 @@ Yes. The plugin works with valid UTF-8 characters.
 = 1.0.2 =
 * Optional creation of tags from the post title
 * New admin toggle for missing tag creation
+
+= 1.0.1 =
+* Improved admin layout spacing
+* Better category controls
+* Added cache-busting version bump
+* Updated translation handling
 
 = 1.0 =
 * Initial public release under the new branding
