@@ -58,6 +58,8 @@ The plugin supports translations through the `languages/` folder.
 
 ## Screenshots
 
+![Auto Tag Smart](smart-auto-tags.png)
+
 The plugin includes a clean admin panel with:
 
 - Toggle options for tagging behavior
